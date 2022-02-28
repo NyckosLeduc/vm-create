@@ -1,4 +1,4 @@
-﻿#
+#
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $True)]
@@ -83,6 +83,11 @@ try {
         --admin-username $adminLogin `
         --admin-password $adminPassword
     }
+	az tag add-value  `
+		--name STA `
+		--value 24H24HJ7 `
+		--name SHT `
+		--value 24H24HJ7
 catch {
     Write-Output "VM already exists"
     }
