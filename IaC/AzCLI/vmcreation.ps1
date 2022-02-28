@@ -81,13 +81,8 @@ try {
         --name $serverName `
         --image win2019datacenter `
         --admin-username $adminLogin `
-        --admin-password $adminPassword
-
-	az tag add-value  `
-		--name STA `
-		--value 24H24HJ7 `
-		--name SHT `
-		--value 24H24HJ7
+        --admin-password $adminPassword `
+		--tags 'STA=24H24HJ7' 'SHT=24H24HJ7'
     }
 catch {
     Write-Output "VM already exists"
