@@ -24,7 +24,7 @@ jobs:
       env:
         RESOURCE_GROUP: Groupe_ISA_Serveur
         RESOURCE_GROUP_REGION: francecentral
-        SERVER_NAME: TEMP
+        SERVER_NAME: TEMP1
         ADMIN_LOGIN: Nicolas
       run: >
         powershell -command "& '${{ env.OUTPUT_PATH }}\IaC\AzCLI\vmcreation.ps1'" 
